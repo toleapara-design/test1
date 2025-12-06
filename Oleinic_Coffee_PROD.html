@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Oleinic Coffee — Искусство в каждой чашке</title>
+<meta name="description" content="Oleinic Coffee — уютная кофейня в центре Кишинева (Atrium Albisoara). Кофе высшего качества, авторская выпечка, бронирование столиков." />
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Oleinic Coffee",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Albișoara 4, Atrium Albisoara",
+    "addressLocality": "Chișinău",
+    "addressCountry": "MD"
+  },
+  "telephone": "+37322123456",
+  "email": "hello@oleiniccoffee.md",
+  "openingHours": [
+    "Mo-Th 07:30-23:00",
+    "Fr-Sa 07:30-00:00",
+    "Su 08:00-22:00"
+  ]
+}
+</script>
+
+<style>
+/* ---- CSS (production) ---- */
+:root{
+  --bg:#fff7f2;
+  --card:#ffffff;
+  --text:#5a4a3b;
+  --accent:#6b4226;
+  --green:#2b6b4f;
+  --gold:#c79b3c;
+  --radius:16px;
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+[data-theme="dark"]{
+  --bg:#0f0f10;
+  --card:#151515;
+  --text:#eae6e2;
+  --accent:#d9b99e;
+  --green:#8fbf9b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:auto;padding:20px}
+
+/* Header */
+header{
+  position:fixed;top:0;width:100%;z-index:1000;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.8);
+}
+header.scrolled{box-shadow:var(--shadow)}
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+}
+.nav-links{display:flex;gap:20px}
+.logo{font-weight:800;font-size:20px;color:var(--accent)}
+.cta{
+  background:var(--green);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:999px;
+}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  background:url('https://source.unsplash.com/1600x900/?coffee-shop') center/cover no-repeat;
+  display:flex;align-items:center;
+}
+.hero .content{
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  padding:40px;
+  border-radius:var(--radius);
+}
+.hero h1{font-size:48px;margin:0}
+.hero p{font-size:18px}
+
+/* Sections */
+section{padding:80px 0}
+h2{color:var(--accent)}
+
+/* Menu */
+.tabs{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.tab{padding:8px 14px;border-radius:999px;border:1px solid #ddd;cursor:pointer}
+.tab.active{background:var(--accent);color:#fff}
+.menu-grid{display:grid;gap:16px}
+.menu-item{
+  background:var(--card);
+  padding:16px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  display:flex;justify-content:space-between;
+}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gallery img{border-radius:12px;cursor:pointer}
+
+/* Footer */
+footer{
+  background:#111;
+  color:#ccc;
+  padding:40px 20px;
+  text-align:center;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  .nav-links{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <div class="logo">Oleinic Coffee</div>
+    <nav class="nav-links">
+      <a href="#menu">Меню</a>
+      <a href="#about">О нас</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+      <a class="cta" href="#reserve">Заказать столик</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="content">
+      <h1>Oleinic Coffee</h1>
+      <p>Искусство в каждой чашке. Уют в самом сердце Кишинева.</p>
+      <a href="#menu" class="cta">Посмотреть меню</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="container">
+  <h2>О нас</h2>
+  <p>
+    Oleinic Coffee — это место, где каждая деталь имеет значение.
+    Отборные зерна, ручная обжарка и атмосфера уюта в Atrium Albisoara.
+  </p>
+</section>
+
+<section id="menu" class="container">
+  <h2>Меню</h2>
+  <div class="tabs">
+    <div class="tab active">Кофе</div>
+    <div class="tab">Чай</div>
+    <div class="tab">Десерты</div>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div>
+        <strong>Эспрессо «Creme de Kishenev»</strong>
+        <div>Насыщенный, бархатный</div>
+      </div>
+      <div>45 MDL</div>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <strong>Flat White «Atrium»</strong>
+        <div>Сливочный баланс</div>
+      </div>
+      <div>65 MDL</div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="container">
+  <h2>Галерея</h2>
+  <div class="gallery">
+    <img src="https://source.unsplash.com/400x400/?coffee" alt="">
+    <img src="https://source.unsplash.com/400x400/?barista" alt="">
+    <img src="https://source.unsplash.com/400x400/?cafe" alt="">
+    <img src="https://source.unsplash.com/400x400/?pastry" alt="">
+  </div>
+</section>
+
+<section id="contacts" class="container">
+  <h2>Контакты</h2>
+  <p>📍 Str. Albișoara 4, Atrium Albisoara, Chișinău</p>
+  <p>📞 +373 22 123 456</p>
+  <p>✉ hello@oleiniccoffee.md</p>
+
+  <iframe
+    src="https://www.google.com/maps?q=47.014942,28.85586&z=16&output=embed"
+    width="100%" height="300" style="border:0;border-radius:12px" loading="lazy">
+  </iframe>
+</section>
+
+<section id="reserve" class="container">
+  <h2>Бронирование</h2>
+  <form onsubmit="return bookTable(event)">
+    <input required placeholder="Имя"><br><br>
+    <input required placeholder="Телефон"><br><br>
+    <input type="date" required><br><br>
+    <button class="cta">Забронировать</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Oleinic Coffee</p>
+  <p>Instagram • Facebook</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('header')
+    .classList.toggle('scrolled',window.scrollY>50)
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+function bookTable(e){
+  e.preventDefault();
+  alert('Спасибо! Мы свяжемся с вами для подтверждения брони.');
+}
+</script>
+
+</body>
+</html>
